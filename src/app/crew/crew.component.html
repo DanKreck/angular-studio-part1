@@ -1,7 +1,18 @@
-<h3>Crew</h3>
-<ul>
-    <li>{{crew[0]}}</li>
-    <li>{{crew[1]}}</li>
-    <li>{{crew[2]}}</li>
-</ul>
+<input #newMember type="text" placeholder="Add member"(keyup.enter)="addMember(newMember.value); newMember.value=''" >
 
+<h3>Crew</h3>
+
+<ul>
+    <li *ngFor="let member of crew">{{member}}</li>
+</ul>
+<p *ngIf="crew.length === 0">No crew!</p>
+
+<!-- Another option -->
+
+<!-- <h3>Crew</h3>
+<ul *ngIf = "crew.length > 0; else noCrewMessage">
+    <li *ngFor="let crew of crew">{{crew}}</li>
+</ul>
+<ng-template #noCrewMessage>
+    <p>No crew!</p>
+</ng-template> -->

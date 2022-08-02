@@ -1,6 +1,7 @@
+<input #newEquipment type="text" placeholder="Add Equipment"(keyup.enter)="addEquipment(newEquipment.value); newEquipment.value=''" >
+
 <h3>Equipment</h3>
 <ul>
-    <li>Habitat dome</li>
-    <li>Food containers</li>
-    <li>Oxygen tanks</li>
+    <li *ngFor="let piece of equipment">{{piece}}</li>
 </ul>
+<p *ngIf="equipment.length === 0">No crew!</p>

@@ -1,3 +1,9 @@
 ul {
     color: darkcyan
 }
+h3 {
+    text-align: center;
+}
+input {
+    margin-left: 15px;
+}

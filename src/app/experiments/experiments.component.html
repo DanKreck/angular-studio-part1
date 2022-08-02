@@ -1,6 +1,7 @@
+<input #newExperiment type="text" placeholder="Add Experiment"(keyup.enter)="addExperiment(newExperiment.value); newExperiment.value=''" >
+
 <h3>Experiments</h3>
 <ul>
-   <li>Mars soil sample</li>
-   <li>Plant growth in habitat</li>
-   <li>Human bone density</li>
+    <li *ngFor="let todo of experiments">{{todo}}</li>
 </ul>
+<p *ngIf="experiments.length === 0">No experiments!</p>
